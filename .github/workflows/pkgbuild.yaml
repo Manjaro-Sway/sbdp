@@ -60,11 +60,10 @@ jobs:
           asset_path: ./${{ env.FILE_NAME }}
           asset_name: ${{ env.FILE_NAME }}
           asset_content_type: application/zstd
-      
-      # - 
-      #   uses: peter-evans/repository-dispatch@v1
-      #   with:
-      #     token: ${{ secrets.DISPATCH }}
-      #     repository: manjaro-sway/packages
-      #     event-type: package_update
-      #     client-payload: '{ "repository": "${{ github.repository }}", "sha": "${{ github.sha }}"}'
+      - 
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.DISPATCH }}
+          repository: manjaro-sway/packages
+          event-type: package_update
+          client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ env.VERSION }}", "file_name": "${{ env.FILE_NAME }}"}'
