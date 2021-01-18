@@ -2,7 +2,7 @@
 
 pkgname=sbdp
 pkgver=1.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc='SwayBindsymDocsParser (sbdp) is a small parser for keybinding hints in a compact form suitable for tiling window environments.'
 url="https://github.com/boredland/sbdp"
 arch=('any')
